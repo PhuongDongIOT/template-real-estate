@@ -1,0 +1,309 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+/* Positionierung und Styling der Navigationsleiste */
+.nav {
+  position: absolute;
+  bottom: 80px;
+  left: 100px;
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+}
+
+/* Navigationsleiste */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.nav-item span {
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.nav-item.active span {
+  opacity: 1;
+}
+
+.nav-bar {
+  width: 280px;
+  /* Set this to the width you want for the nav bar */
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Default background color */
+  position: relative;
+  overflow: hidden;
+  opacity: 0.5;
+  /* Default opacity */
+  transition: opacity 0.5s ease, width 0.5s ease;
+  /* Transition for width and opacity */
+  margin-top: 20px;
+}
+
+.nav-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  /* Set background-color for the loading bar */
+  transform: translateX(-100%);
+  /* Start outside the bar */
+  opacity: 1;
+  /* Default opacity for loading animation */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Activate loading animation for the active bar */
+.nav-item.active .nav-bar::before {
+  transform: translateX(0);
+  /* Fill the bar from left to right */
+  opacity: 1;
+  /* Set full opacity when active */
+}
+
+/* Full opacity for the active bar */
+.nav-item.active .nav-bar {
+  opacity: 1;
+  /* Full opacity for active bar */
+}
+
+/* Hover-Effekt */
+.nav-item:hover .nav-bar {
+  background-color: white;
+  opacity: 1;
+}
+
+/* Pfeil-Button */
+.button {
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+}
+
+.arrow {
+  fill: white;
+  width: 60px;
+  height: 60px;
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+  .button {
+    bottom: 60px;
+    right: 10px;
+    width: 60px;
+    /* Set a smaller width */
+    height: 50px;
+    /* Set a smaller height */
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .text {
+    font-size: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav {
+    position: absolute;
+    bottom: 60px;
+    /* Aligns the nav with the button */
+    left: 10px;
+    /* Align left with the button */
+    width: calc(100% - 80px);
+    /* Full width minus some padding for the button */
+    display: flex;
+    justify-content: space-between;
+    /* Space evenly */
+    z-index: 10;
+  }
+
+  .nav-item {
+    flex: 1;
+    /* Each item takes equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 0;
+    /* No margin between items */
+    cursor: pointer;
+  }
+
+  /* Inactive bars */
+  .nav-bar {
+    width: 60px;
+    /* Smaller width for inactive bars */
+    height: 4px;
+    /* Adjust height if needed */
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.5;
+    /* Set to 0.5 for inactive bars on smaller screens */
+    transition: opacity 0.5s ease, width 0.5s ease;
+    /* Animate width and opacity */
+  }
+
+  /* Active bar */
+  .nav-item.active .nav-bar {
+    width: 90px;
+    /* Larger width for the active bar */
+    opacity: 1;
+    /* Full opacity for active */
+  }
+
+  .nav-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transform: translateX(-100%);
+    /* Start outside the bar */
+    opacity: 0.5;
+    /* Set to 0.5 for consistency */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* Loading animation for active bar */
+  .nav-item.active .nav-bar::before {
+    transform: translateX(0);
+    /* Fill the bar from left to right */
+    opacity: 1;
+  }
+
+  /* Inactive text styling */
+  .nav-item span {
+    font-size: 14px;
+    /* Keep the font size for visibility */
+    opacity: 0.5;
+    /* Slightly dim the inactive text */
+  }
+
+  /* Active text styling */
+  .nav-item.active span {
+    opacity: 1;
+    /* Full opacity for active text */
+  }
+}
+
+/* Keep the design for larger displays */
+@media (min-width: 769px) and (max-width: 1366px) {
+  .text {
+    font-size: 80px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .button {
+    bottom: 11vh;
+    right: 1vh;
+    width: 120px;
+    /* Set a smaller width */
+    height: 40px;
+    /* Set a smaller height */
+  }
+
+  .arrow {
+    width: 7vh;
+    height: 7vh;
+  }
+
+  .nav {
+    position: absolute;
+    bottom: 7vh;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+  }
+
+  .nav-bar {
+    width: 200px;
+    /* Adjusted width to make it narrower */
+    height: 5px;
+    /* Adjust height if needed */
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    overflow: hidden;
+    opacity: 0.5;
+    /* Set to 0.5 for inactive bars */
+    transition: opacity 0.5s ease;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 10px;
+    /* Reduced margin to create a more compact layout */
+    cursor: pointer;
+  }
+
+  .nav-item:last-child {
+    margin-right: 0;
+    /* Remove margin for the last item */
+  }
+
+  .nav-item span {
+    font-size: 14px;
+    /* Keep the font size for visibility */
+  }
+}
