@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slideTexts = [
-        "01 Slide 1 Thiên nhiên",
-        "02 Slide 2 Thiên nhiên",
-        "03 Slide 3 Thiên nhiên",
-        "04 Slide 4 Thiên nhiên"
+        "01 Slide </br>1 Thiên nhiên",
+        "02 Slide </br>2 Thiên nhiên",
+        "03 Slide </br>3 Thiên nhiên",
+        "04 Slide </br>4 Thiên nhiên"
     ];
 
     const navItems = Array.from(document.querySelectorAll(".nav-item"));
