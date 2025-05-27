@@ -1,0 +1,17 @@
+.horizontal-section {
+    display: flex;
+    width: max-content;
+}
+
+.panel {
+    flex: 0 0 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.animate-image {
+    opacity: 0;
+    transform: translateY(50px);
+}
