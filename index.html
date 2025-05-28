@@ -12,10 +12,11 @@
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="custom.css">
-    <link rel="stylesheet" href="custom-new.css">
-    <link rel="stylesheet" href="carousel.css">
-    <link rel="stylesheet" href="css/output.css">
+    <!-- Import Splide core + Autoplay plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
+
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <!-- ScrollTrigger -->
@@ -24,6 +25,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/GSDevTools.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+
+
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="spline.css">
+    <link rel="stylesheet" href="custom-new.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="css/output.css">
 
     <style>
         .text-lora {
@@ -76,55 +86,314 @@
 </head>
 
 <body class="relative linear-bg">
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
-            <section class="wrapper flex w-full h-screen relative" id="wrapper">
-                <div class="w-full h-screen relative overflow-hidden">
-                    <div class="slider-slide w-full h-screen bg-cover bg-center"
-                        style="background-image: url(./image/The\ Felix_C02_Playground.webp);"></div>
-                    <div class="slider-slide w-full h-screen bg-cover bg-center"
-                        style="background-image: url(./image/The\ Felix_C03_Pool.webp);"></div>
-                    <div class="slider-slide w-full h-screen bg-cover bg-center"
-                        style="background-image: url(./image/The\ Felix_C06_Drop\ Off.webp);"></div>
-                    <div class="slider-slide w-full h-screen bg-cover bg-center"
-                        style="background-image: url(./image/The\ Felix_C07_Shophouse.webp);"></div>
+    <section class="wrapper flex w-full h-screen relative" id="wrapper">
+        <div class="w-full h-screen relative overflow-hidden">
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C02_Playground.webp);"></div>
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C03_Pool.webp);"></div>
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C06_Drop\ Off.webp);"></div>
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C07_Shophouse.webp);"></div>
+        </div>
+
+        <div class="text text-6xl lg:text-8xl top-56 left-12 font-extrabold text-lora bg-amber-50/10 px-6 py-4 border-b-4 border-b-blue-100"
+            id="text">
+            <h2 class="gold-gradient">
+                01 Slide</br> 1 Thiên nhiên
+            </h2>
+        </div>
+
+        <div class="nav absolute flex flex-col lg:flex-row text-lora text-md text-shadow-xs text-shadow-blue-300 font-bold"
+            id="nav">
+            <div class="nav-item active" id="navItem0">
+                <span>01 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+            <div class="nav-item" id="navItem1">
+                <span>02 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+            <div class="nav-item" id="navItem2">
+                <span>03 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+            <div class="nav-item" id="navItem3">
+                <span>04 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+        </div>
+
+        <button class="button" id="next">
+            <span>Next</span>
+        </button>
+    </section>
+
+
+    <section class="py-10 px-4 text-lora">
+        <div class="max-w-6xl mx-auto bg-white p-8 shadow-lg">
+            <form class="flex flex-col lg:flex-row gap-6">
+                <div class="relative w-full">
+                    <input type="text" id="name" placeholder=" "
+                        class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                    <label for="name"
+                        class="absolute text-gray-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
+                        Họ và tên
+                    </label>
                 </div>
 
-                <div class="text gold-gradient-wife text-6xl lg:text-8xl top-56 left-12 font-extrabold text-lora bg-amber-50/10 px-6 py-4 border-b-4 border-b-blue-100"
-                    id="text">
-                    <h2 class="gold-gradient">
-                        01 Slide</br> 1 Thiên nhiên
-                    </h2>
+
+                <div class="relative w-full">
+                    <input type="tel" id="phone" placeholder=" "
+                        class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                    <label for="phone"
+                        class="absolute text-gray-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
+                        Số điện thoại
+                    </label>
                 </div>
 
-                <div class="nav absolute flex flex-col lg:flex-row text-lora text-md text-shadow-xs text-shadow-blue-300 font-bold"
-                    id="nav">
-                    <div class="nav-item active" id="navItem0">
-                        <span>01 Thiên nhiên</span>
-                        <div class="nav-bar"></div>
-                    </div>
-                    <div class="nav-item" id="navItem1">
-                        <span>02 Thiên nhiên</span>
-                        <div class="nav-bar"></div>
-                    </div>
-                    <div class="nav-item" id="navItem2">
-                        <span>03 Thiên nhiên</span>
-                        <div class="nav-bar"></div>
-                    </div>
-                    <div class="nav-item" id="navItem3">
-                        <span>04 Thiên nhiên</span>
-                        <div class="nav-bar"></div>
-                    </div>
-                </div>
-
-                <button class="button" id="next">
-                    <span>Next</span>
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-8 py-3 rounded-2xl hover:from-green-500 hover:to-blue-600 transition">
+                    Book ngay
                 </button>
-            </section>
+
+            </form>
+        </div>
+    </section>
 
 
-            <section class="py-10 px-4 text-lora">
-                <div class="max-w-6xl mx-auto bg-white p-8 shadow-lg">
+
+
+    <section class="mx-auto max-w-6xl h-auto py-2 my-8 lg:my-16">
+        <h2 class="text-5xl lg:text-7xl text-center font-bold text-playfair-display gold-gradient py-4">
+            Tổng Quang
+        </h2>
+        <div class="mt-8 overflow-auto rounded-lg bg-white/10 outline outline-white/5 dark:bg-gray-950/50">
+            <div class="my-8 overflow-hidden">
+                <table class="w-full table-auto border-collapse text-sm text-lora">
+                    <thead>
+                        <tr>
+                            <th class="border-b border-white p-4 pt-0 pb-3 pl-8 text-left font-medium text-black">
+                                Tên thương mại</th>
+                            <th class="border-b border-white p-4 pt-0 pb-3 text-left font-medium text-black">
+                                The Felix</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white/10 dark:bg-gray-800">
+                        <tr>
+                            <td class="border-b border-gray-100 p-4 pl-8 text-black">
+                                Chủ đầu tư </td>
+                            <td class="border-b border-gray-100 p-4 text-black">
+                                Công ty Cổ phần C-Holdings</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-gray-100 p-4 pl-8 text-black">
+                                Đối tác tư vấn triển khai</td>
+                            <td class="border-b border-gray-100 p-4 text-black">
+                                BHS Group</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Vị trí</td>
+                            <td class="border-b border-white p-4 text-black">
+                                Tọa lạc ngay mặt tiền Đường Nguyễn Du, Phường Bình Hòa, trung tâm Thành phố
+                                Thuận An,
+                                Tỉnh Bình Dương.</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Quy mô </td>
+                            <td class="border-b border-white p-4 text-black">
+                                9,465 m2 (gồm 40 tầng nổi + 01 tầng hầm)</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Mật độ xây dựng</td>
+                            <td class="border-b border-white p-4 text-black">
+                                39% (gồm diện tích đường giao thông)</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Số lượng căn hộ</td>
+                            <td class="border-b border-white p-4 text-black">
+                                1216 căn (Tháp A: 604 căn, Tháp B: 612 căn) </td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Tiện ích</td>
+                            <td class="border-b border-white p-4 text-black">
+                                68 tiện ích nội khu</td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Loại hình sản phẩm </td>
+                            <td class="border-b border-white p-4 text-black">
+                                Căn hộ, Officetel, Duplex, Shop</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Diện tích căn hộ</td>
+                            <td class="border-b border-white p-4 text-black">
+                                <ul>
+                                    <li>Căn 1 PN: 44.30m2 - 45.68m2</li>
+                                    <li>Căn 2 PN: 59.75m2 - 70.20m2</li>
+                                    <li>Căn 3 PN: 83.56m2 - 85.58m2</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border-b border-white p-4 pl-8 text-black">
+                                Hình thức sở hữu</td>
+                            <td class="border-b border-white p-4 text-black">
+                                <ul>
+                                    <li>Người Việt Nam: Sở hữu lâu dài</li>
+                                    <li>Người nước ngoài: Sở hữu 50 năm</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section horizontal">
+        <div class="slides-container">
+            <div class="slide gradient-blue md:relative">
+                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <h3
+                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        Vững pháp lý
+                    </h3>
+                    <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
+                        class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
+                        loading="lazy" title="Logo Example Company">
+                    <div
+                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
+                            <li class="flex items-start mb-0">
+                                <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
+                                    tư).</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
+                                    <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
+                                        biên</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
+                                    liên quan đến dự án.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide gradient-blue md:relative">
+                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <h3
+                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        Vững pháp lý
+                    </h3>
+                    <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
+                        class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
+                        loading="lazy" title="Logo Example Company">
+                    <div
+                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
+                            <li class="flex items-start mb-0">
+                                <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
+                                    tư).</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
+                                    <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
+                                        biên</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
+                                    liên quan đến dự án.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide gradient-blue md:relative">
+                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <h3
+                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        Vững pháp lý
+                    </h3>
+                    <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
+                        class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
+                        loading="lazy" title="Logo Example Company">
+                    <div
+                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
+                            <li class="flex items-start mb-0">
+                                <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
+                                    tư).</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
+                                    <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
+                                        biên</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
+                                    liên quan đến dự án.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide gradient-blue md:relative">
+                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <h3
+                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        Vững pháp lý
+                    </h3>
+                    <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
+                        class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
+                        loading="lazy" title="Logo Example Company">
+                    <div
+                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
+                            <li class="flex items-start mb-0">
+                                <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
+                                    tư).</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
+                                    <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
+                                        biên</strong>.</span>
+                            </li>
+                            <li class="flex items-start mb-0">
+                                <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
+                                    liên quan đến dự án.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="w-full bg-white">
+                <div class="max-w-6xl mx-auto p-8 shadow-lg">
                     <form class="flex flex-col lg:flex-row gap-6">
                         <div class="relative w-full">
                             <input type="text" id="name" placeholder=" "
@@ -152,369 +421,300 @@
 
                     </form>
                 </div>
-            </section>
+
+            </div>
 
 
-
-
-            <section class="mx-auto max-w-6xl h-auto py-2 my-8 lg:my-16">
-                <h2
-                    class="text-5xl lg:text-7xl text-center font-bold text-playfair-display gold-gradient-wife gold-gradient py-4">
-                    Tổng Quang
-                </h2>
-                <div class="mt-8 overflow-auto rounded-lg bg-white/10 outline outline-white/5 dark:bg-gray-950/50">
-                    <div class="my-8 overflow-hidden">
-                        <table class="w-full table-auto border-collapse text-sm text-lora">
-                            <thead>
-                                <tr>
-                                    <th
-                                        class="border-b border-white p-4 pt-0 pb-3 pl-8 text-left font-medium text-black">
-                                        Tên thương mại</th>
-                                    <th class="border-b border-white p-4 pt-0 pb-3 text-left font-medium text-black">
-                                        The Felix</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white/10 dark:bg-gray-800">
-                                <tr>
-                                    <td class="border-b border-gray-100 p-4 pl-8 text-black">
-                                        Chủ đầu tư </td>
-                                    <td class="border-b border-gray-100 p-4 text-black">
-                                        Công ty Cổ phần C-Holdings</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-gray-100 p-4 pl-8 text-black">
-                                        Đối tác tư vấn triển khai</td>
-                                    <td class="border-b border-gray-100 p-4 text-black">
-                                        BHS Group</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Vị trí</td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        Tọa lạc ngay mặt tiền Đường Nguyễn Du, Phường Bình Hòa, trung tâm Thành phố
-                                        Thuận An,
-                                        Tỉnh Bình Dương.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Quy mô </td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        9,465 m2 (gồm 40 tầng nổi + 01 tầng hầm)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Mật độ xây dựng</td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        39% (gồm diện tích đường giao thông)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Số lượng căn hộ</td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        1216 căn (Tháp A: 604 căn, Tháp B: 612 căn) </td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Tiện ích</td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        68 tiện ích nội khu</td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Loại hình sản phẩm </td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        Căn hộ, Officetel, Duplex, Shop</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Diện tích căn hộ</td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        <ul>
-                                            <li>Căn 1 PN: 44.30m2 - 45.68m2</li>
-                                            <li>Căn 2 PN: 59.75m2 - 70.20m2</li>
-                                            <li>Căn 3 PN: 83.56m2 - 85.58m2</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="border-b border-white p-4 pl-8 text-black">
-                                        Hình thức sở hữu</td>
-                                    <td class="border-b border-white p-4 text-black">
-                                        <ul>
-                                            <li>Người Việt Nam: Sở hữu lâu dài</li>
-                                            <li>Người nước ngoài: Sở hữu 50 năm</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4  linear-bg">
+                <div class="flex flex-col gap-2 lg:gap-4">
+                    <img src="./image/z6623231046114_d121ebf75389b1d245cf855f35e3b2da.webp" alt="" srcset=""
+                        class="h-full w-auto">
+                    <img src="./image/z6623233622803_99b86001bdbdd915034579c5440e1238.webp" alt="" srcset=""
+                        class="h-full w-auto">
                 </div>
-            </section>
-
-
-            <section class="section horizontal">
-                <div class="slides-container">
-                    <div class="slide gradient-blue md:relative">
-                        <div
-                            class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
-                            <h3
-                                class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
-                                Vững pháp lý
-                            </h3>
-                            <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp"
-                                alt="Logo của công ty Example"
-                                class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                                loading="lazy" title="Logo Example Company">
-                            <div
-                                class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
-                                <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
-                                    <li class="flex items-start mb-0">
-                                        <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
-                                            tư).</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
-                                            <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
-                                                biên</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
-                                            liên quan đến dự án.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide gradient-blue md:relative">
-                        <div
-                            class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
-                            <h3
-                                class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
-                                Vững pháp lý
-                            </h3>
-                            <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp"
-                                alt="Logo của công ty Example"
-                                class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                                loading="lazy" title="Logo Example Company">
-                            <div
-                                class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
-                                <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
-                                    <li class="flex items-start mb-0">
-                                        <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
-                                            tư).</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
-                                            <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
-                                                biên</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
-                                            liên quan đến dự án.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide gradient-blue md:relative">
-                        <div
-                            class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
-                            <h3
-                                class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
-                                Vững pháp lý
-                            </h3>
-                            <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp"
-                                alt="Logo của công ty Example"
-                                class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                                loading="lazy" title="Logo Example Company">
-                            <div
-                                class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
-                                <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
-                                    <li class="flex items-start mb-0">
-                                        <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
-                                            tư).</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
-                                            <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
-                                                biên</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
-                                            liên quan đến dự án.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide gradient-blue md:relative">
-                        <div
-                            class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
-                            <h3
-                                class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
-                                Vững pháp lý
-                            </h3>
-                            <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp"
-                                alt="Logo của công ty Example"
-                                class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                                loading="lazy" title="Logo Example Company">
-                            <div
-                                class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
-                                <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
-                                    <li class="flex items-start mb-0">
-                                        <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
-                                            tư).</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Có <strong>giấy chứng nhận quyền sử dụng đất (sổ đỏ)</strong> hoặc
-                                            <strong>quyền sở hữu nhà (sổ hồng)</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span>Không vướng <strong>tranh chấp, thế chấp</strong>, hoặc <strong>bị kê
-                                                biên</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start mb-0">
-                                        <span><strong>Chủ đầu tư hoặc bên bán</strong> đã hoàn tất các nghĩa vụ pháp lý
-                                            liên quan đến dự án.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-span-2 grid grid-cols-2 gap-2 lg:gap-4">
+                    <img src="./image/z6623233676248_24266fd1a3841e69d236841b98cc2531.webp" srcset=""
+                        class="h-full w-auto">
+                    <img src="./image/z6623233696106_ed22a25ea5c4bf102df4de007d6f1d10.webp" srcset=""
+                        class="h-full w-auto">
+                    <img src="./image/z6623233676126_645ab8f16395da1f795cad3a1d4ca246.webp" srcset=""
+                        class="h-full w-auto">
+                    <img src="./image/z6623233657386_bbfe15c4b23497927f4a5eafccb827a8.webp" srcset=""
+                        class="h-full w-auto">
                 </div>
-                <div class="overlay">
-                    <div class="w-full bg-white">
-                        <div class="max-w-6xl mx-auto p-8 shadow-lg">
-                            <form class="flex flex-col lg:flex-row gap-6">
-                                <div class="relative w-full">
-                                    <input type="text" id="name" placeholder=" "
-                                        class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                                    <label for="name"
-                                        class="absolute text-gray-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
-                                        Họ và tên
-                                    </label>
-                                </div>
 
-
-                                <div class="relative w-full">
-                                    <input type="tel" id="phone" placeholder=" "
-                                        class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                                    <label for="phone"
-                                        class="absolute text-gray-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
-                                        Số điện thoại
-                                    </label>
-                                </div>
-
-                                <button type="submit"
-                                    class="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-8 py-3 rounded-2xl hover:from-green-500 hover:to-blue-600 transition">
-                                    Book ngay
-                                </button>
-
-                            </form>
-                        </div>
-
-                    </div>
-
-
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4  linear-bg">
-                        <div class="flex flex-col gap-2 lg:gap-4">
-                            <img src="./image/z6623231046114_d121ebf75389b1d245cf855f35e3b2da.webp" alt="" srcset=""
-                                class="h-full w-auto">
-                            <img src="./image/z6623233622803_99b86001bdbdd915034579c5440e1238.webp" alt="" srcset=""
-                                class="h-full w-auto">
-                        </div>
-                        <div class="col-span-2 grid grid-cols-2 gap-2 lg:gap-4">
-                            <img src="./image/z6623233676248_24266fd1a3841e69d236841b98cc2531.webp" srcset=""
-                                class="h-full w-auto">
-                            <img src="./image/z6623233696106_ed22a25ea5c4bf102df4de007d6f1d10.webp" srcset=""
-                                class="h-full w-auto">
-                            <img src="./image/z6623233676126_645ab8f16395da1f795cad3a1d4ca246.webp" srcset=""
-                                class="h-full w-auto">
-                            <img src="./image/z6623233657386_bbfe15c4b23497927f4a5eafccb827a8.webp" srcset=""
-                                class="h-full w-auto">
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-
-            <section class="mt-8 max-w-6xl mx-auto text-black">
-                <div class="grid grid-cols-2 lg:grid-cols-3 grid-rows-3 border-2 border-cyan-300 border-collapse">
-                    <div class="col-span-2 lg:row-span-2">
-                        <div class="hidden lg:block h-48 w-full lg:border-b-2 lg:border-cyan-300">
-                        </div>
-                        <h3
-                            class="text-center lg:text-left font-bold gold-gradient text-4xl lg:text-6xl px-4 py-4 text-playfair-display">
-                            Không lo </br>
-                            <span class="text-6xl lg:text-8xl">
-                                về giá
-                            </span>
-                        </h3>
-                    </div>
-                    <div
-                        class="col-span-2 lg:col-span-1 row-span-2 border-2 border-t-0 lg:border-r-0 lg:border-cyan-300">
-                        <img src="https://duanthefelix.vn/wp-content/uploads/2025/05/The-Felix_C08_Pool.webp"
-                            alt="Mô tả hình ảnh"
-                            class="w-full h-full object-cover transition duration-500 ease-in-out brightness-75 group-hover:brightness-100" />
-                    </div>
-                    <div class="col-span-2 border-2 border-l-0 border-b-0 border-cyan-300 h-full  bg-cover bg-center"
-                        style="background-image: url(https://duanthefelix.vn/wp-content/uploads/2025/05/The-Felix_C08_Pool.webp);">
-                    </div>
-                    <div class="p-4 col-span-2 lg:col-span-1 text-lora">
-                        Chính sách giá linh hoạt – Ưu đãi hấp dẫn – Cam kết minh bạch từ chủ đầu tư. Giúp bạn dễ dàng sở
-                        hữu không gian sống lý tưởng mà vẫn tối ưu tài chính cá nhân.
-                    </div>
-                </div>
-            </section>
-
-            <section class="horizontal-section h-screen">
-                <div class="panel h-screen text-black text-lora">
-                    <div class="animate-image">
-                        <div class="h-creen w-full flex">
-                            <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.jpg" alt="Logo của công ty Example"
-                                class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                                loading="lazy" title="Logo Example Company">
-                                <div>
-                                    
-                                </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel h-screen text-black text-lora">
-                    <div class="animate-image">
-                        <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.webp" alt="Logo của công ty Example"
-                            class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                            loading="lazy" title="Logo Example Company">
-                    </div>
-                </div>
-                <div class="panel h-screen text-black text-lora">
-                    <div class="animate-image">
-                        <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.webp" alt="Logo của công ty Example"
-                            class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
-                            loading="lazy" title="Logo Example Company">
-                    </div>
-                </div>
-            </section>
-
+            </div>
         </div>
-    </div>
+    </section>
+
+
+
+    <section class="mt-8 pb-4 lg:pb-8 max-w-6xl mx-auto text-black">
+        <div class="grid grid-cols-2 lg:grid-cols-3 grid-rows-3 border-2 border-cyan-300 border-collapse">
+            <div class="col-span-2 lg:row-span-2">
+                <div class="hidden lg:block h-48 w-full lg:border-b-2 lg:border-cyan-300">
+                </div>
+                <h3
+                    class="text-center lg:text-left font-bold gold-gradient text-4xl lg:text-6xl px-4 py-4 text-playfair-display">
+                    Không lo </br>
+                    <span class="text-6xl lg:text-8xl">
+                        về giá
+                    </span>
+                </h3>
+            </div>
+            <div class="col-span-2 lg:col-span-1 row-span-2 border-2 border-t-0 lg:border-r-0 lg:border-cyan-300">
+                <img src="./image/z6623233676125_93218eaad84979732ef39180bf67a715.webp"
+                    alt="Mô tả hình ảnh"
+                    class="w-full h-full object-cover transition duration-500 ease-in-out brightness-75 group-hover:brightness-100" />
+            </div>
+            <div class="col-span-2 border-2 border-l-0 border-b-0 border-cyan-300 h-full  bg-cover bg-center"
+                style="background-image: url(https://duanthefelix.vn/wp-content/uploads/2025/05/The-Felix_C08_Pool.webp);">
+            </div>
+            <div class="p-4 col-span-2 lg:col-span-1 text-lora">
+                Chính sách giá linh hoạt – Ưu đãi hấp dẫn – Cam kết minh bạch từ chủ đầu tư. Giúp bạn dễ dàng sở
+                hữu không gian sống lý tưởng mà vẫn tối ưu tài chính cá nhân.
+            </div>
+        </div>
+    </section>
+
+
+    <section class="horizontal-scroll-wrapper">
+        <div class="horizontal-scroll-content">
+            <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full">
+                    <div class="h-creen w-full flex relative">
+                        <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                                <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.jpg" alt="Logo của công ty Example"
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
+                                    title="Logo Example Company">
+
+                                <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
+                                    <div class="font-sans px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                            1 WC</h3>
+
+                                        <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
+                                        <p class="text-sm lg:text-lg text-gray-700">01+ bedrooms - 01 Restrooms</p>
+
+                                        <hr class="border-blue-900 border-t-2 mb-2 lg:mb-4">
+
+                                        <div class="flex justify-between items-baseline mb-0 lg:mb-2">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích tim tường/ NFA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">45.18m²</p>
+                                        </div>
+                                        <div class="flex justify-between items-baseline">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích thông thủy/ NSA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
+                                        </div>
+                                    </div>
+                                    <img src="./image/chdh/MB_CĂN_HỘ_1PN+1WC_-_45.18M-removebg-preview.png"
+                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <div id="image-carousel" class="splide" aria-label="Splide Basic HTML Example">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/1.webp" alt="Slide 1">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/2.webp" alt="Slide 2">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/3.webp" alt="Slide 3">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+             <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full">
+                    <div class="h-creen w-full flex relative">
+                        <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                                <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.jpg" alt="Logo của công ty Example"
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
+                                    title="Logo Example Company">
+
+                                <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
+                                    <div class="font-sans px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                            1 WC</h3>
+
+                                        <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
+                                        <p class="text-sm lg:text-lg text-gray-700">01+ bedrooms - 01 Restrooms</p>
+
+                                        <hr class="border-blue-900 border-t-2 mb-2 lg:mb-4">
+
+                                        <div class="flex justify-between items-baseline mb-0 lg:mb-2">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích tim tường/ NFA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">45.18m²</p>
+                                        </div>
+                                        <div class="flex justify-between items-baseline">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích thông thủy/ NSA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
+                                        </div>
+                                    </div>
+                                    <img src="./image/chdh/MB_CĂN_HỘ_1PN+1WC_-_45.18M-removebg-preview.png"
+                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <div id="image-carousel1" class="splide" aria-label="Splide Basic HTML Example">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/1.webp" alt="Slide 1">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/2.webp" alt="Slide 2">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/3.webp" alt="Slide 3">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+             <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full">
+                    <div class="h-creen w-full flex relative">
+                        <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                                <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.jpg" alt="Logo của công ty Example"
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
+                                    title="Logo Example Company">
+
+                                <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
+                                    <div class="font-sans px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                            1 WC</h3>
+
+                                        <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
+                                        <p class="text-sm lg:text-lg text-gray-700">01+ bedrooms - 01 Restrooms</p>
+
+                                        <hr class="border-blue-900 border-t-2 mb-2 lg:mb-4">
+
+                                        <div class="flex justify-between items-baseline mb-0 lg:mb-2">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích tim tường/ NFA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">45.18m²</p>
+                                        </div>
+                                        <div class="flex justify-between items-baseline">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích thông thủy/ NSA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
+                                        </div>
+                                    </div>
+                                    <img src="./image/chdh/MB_CĂN_HỘ_1PN+1WC_-_45.18M-removebg-preview.png"
+                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <div id="image-carousel2" class="splide" aria-label="Splide Basic HTML Example">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/1.webp" alt="Slide 1">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/2.webp" alt="Slide 2">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/3.webp" alt="Slide 3">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+             <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full">
+                    <div class="h-creen w-full flex relative">
+                        <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                                <img src="image/chdh/MB CĂN HỘ 1PN+1WC - 45.18M.jpg" alt="Logo của công ty Example"
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
+                                    title="Logo Example Company">
+
+                                <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
+                                    <div class="font-sans px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                            1 WC</h3>
+
+                                        <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
+                                        <p class="text-sm lg:text-lg text-gray-700">01+ bedrooms - 01 Restrooms</p>
+
+                                        <hr class="border-blue-900 border-t-2 mb-2 lg:mb-4">
+
+                                        <div class="flex justify-between items-baseline mb-0 lg:mb-2">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích tim tường/ NFA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">45.18m²</p>
+                                        </div>
+                                        <div class="flex justify-between items-baseline">
+                                            <p class="text-sm lg:text-lg text-gray-700">Diện tích thông thủy/ NSA:
+                                            </p>
+                                            <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
+                                        </div>
+                                    </div>
+                                    <img src="./image/chdh/MB_CĂN_HỘ_1PN+1WC_-_45.18M-removebg-preview.png"
+                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <div id="image-carousel3" class="splide" aria-label="Splide Basic HTML Example">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/1.webp" alt="Slide 1">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/2.webp" alt="Slide 2">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="./image/ch2pn/3.webp" alt="Slide 3">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="index.js"></script>
+    <script src="splide.js"></script>
     <script src="index-new.js"></script>
-    <script src="scroll.js"></script>
+    <!-- <script src="scroll.js"></script> -->
     <script src="carousel.js"></script>
 
 </body>

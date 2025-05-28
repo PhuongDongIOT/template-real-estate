@@ -1,0 +1,10 @@
+  .splide__arrow {
+      background: transparent !important;
+      border: none !important;
+  }
+
+  .splide__arrow svg {
+      fill: #fff;
+      height: 0.8em;
+      width: 0.8em;
+  }

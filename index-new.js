@@ -1,30 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Scroll ngang cho section
-let sections = gsap.utils.toArray(".panel");
-gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
+const container = document.querySelector(".horizontal-scroll-content");
+const panels = document.querySelectorAll(".panel");
+const totalWidth = container.scrollWidth;
+
+gsap.to(container, {
+    x: () => -(totalWidth - window.innerWidth),
     ease: "none",
     scrollTrigger: {
-        trigger: ".horizontal-section",
+        trigger: ".horizontal-scroll-wrapper",
+        start: "top top",
+        end: () => `+=${totalWidth - window.innerWidth}`,
         pin: true,
-        scrub: 1,
-        end: () => "+=" + document.querySelector(".horizontal-section").offsetWidth
+        scrub: true,
+        anticipatePin: 1,
     }
-});
-
-// Hiệu ứng xuất hiện cho chữ khi scroll tới panel
-gsap.utils.toArray(".animate-image").forEach((text, i) => {
-    gsap.to(text, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: text,
-            containerAnimation: ScrollTrigger.getById("scrollX"), // nếu dùng container animation
-            start: "left center",
-            toggleActions: "play none none reverse"
-        }
-    });
 });
