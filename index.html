@@ -81,6 +81,18 @@
                 left: 125%;
             }
         }
+
+        @media (width >=64rem) {
+
+            .rotate-text {
+                transform: rotate(-90deg);
+                transform-origin: left top;
+            }
+
+            .bg-estate {
+                background-image: url(./image/the_felix.jpg);
+            }
+        }
     </style>
 
 </head>
@@ -130,15 +142,43 @@
         </button>
     </section>
 
+    <section class="mt-8 px-2 w-full overflow-hidden">
+        <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-4 shadow-inner bg-gradient-to-br from-[#fef7ef] to-[#f9f1e9] rounded-lg">
+            <div class="col-span-2 grid grid-cols-2 text-black py-2 px-4">
+                <h2 class="text-4xl font-bold gsap-heading text-playfair-display">Lorem ipsum dolor</h2>
+                <h3 class="text-2xl gsap-subheading text-lora">Lorem ipsum dolor sit amet consectetur</h3>
+                <p class="col-span-2 gsap-text text-lora">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Sapiente, fugit quibusdam minus tempora quam error, exercitationem architecto, molestiae quia minima
+                    quaerat quae culpa ea accusamus dolorum ducimus eligendi optio iure.</p>
+            </div>
+            <div>
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover shadow-lg"
+                    loading="lazy">
+            </div>
+            <div>
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover shadow-lg"
+                    loading="lazy">
+            </div>
+        </div>
+    </section>
 
-    <section class="py-10 px-4 text-lora">
-        <div class="max-w-6xl mx-auto bg-white p-8 shadow-lg">
+
+
+    <section class="pt-8 pb-4 lg:py-10 px-2 lg:px-4 text-lora">
+        <div class="max-w-6xl mx-auto shadow-inner bg-gradient-to-br from-[#fef7ef] to-[#f9f1e9] rounded-lg p-8">
             <form class="flex flex-col lg:flex-row gap-6">
+                <div class="lg:h-16 lg:w-48">
+                    <img src="image/watercolor floral flower.png" alt="Logo của công ty Example"
+                        class="mx-auto w-1/2 lg:w-full h-full object-cover" loading="lazy" title="Logo Example Company">
+                </div>
                 <div class="relative w-full">
                     <input type="text" id="name" placeholder=" "
-                        class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                        class="peer w-full border border-amber-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
                     <label for="name"
-                        class="absolute text-gray-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
+                        class="absolute text-amber-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-amber-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
                         Họ và tên
                     </label>
                 </div>
@@ -146,9 +186,9 @@
 
                 <div class="relative w-full">
                     <input type="tel" id="phone" placeholder=" "
-                        class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                        class="peer w-full border border-amber-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
                     <label for="phone"
-                        class="absolute text-gray-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
+                        class="absolute text-amber-500 text-sm top-4 left-4 transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-amber-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500">
                         Số điện thoại
                     </label>
                 </div>
@@ -165,77 +205,82 @@
 
 
 
-    <section class="mx-auto max-w-6xl h-auto py-2 my-8 lg:my-16">
-        <h2 class="text-5xl lg:text-7xl text-center font-bold text-playfair-display gold-gradient py-4">
-            Tổng Quang
+    <section
+        class="overflow-hidden project-section mx-auto h-auto py-2 my-4 lg:my-16 lg:bg-center lg:bg-no-repeat lg:bg-cover bg-estate relative">
+        <h2
+            class="text-5xl lg:text-9xl text-center font-bold text-playfair-display py-4 lg:absolute lg:top-[90%] lg:-right-[35.625rem] rotate-text">
+            <span class="gold-gradient">Tổng Quang</span>
         </h2>
-        <div class="mt-8 overflow-auto rounded-lg bg-white/10 outline outline-white/5 dark:bg-gray-950/50">
+        <div
+            class="table-container mt-8 lg:ml-8 overflow-auto rounded-lg bg-white/10 outline outline-white/5 dark:bg-gray-950/50 lg:relative lg:w-[50%] shadow-inner bg-gradient-to-br from-[rgba(254,247,239,0.6)] to-[rgba(249,241,233,0.6)]">
             <div class="my-8 overflow-hidden">
-                <table class="w-full table-auto border-collapse text-sm text-lora">
+                <table class="w-full table-auto border-collapse text-lora text-md">
                     <thead>
                         <tr>
-                            <th class="border-b border-white p-4 pt-0 pb-3 pl-8 text-left font-medium text-black">
-                                Tên thương mại</th>
-                            <th class="border-b border-white p-4 pt-0 pb-3 text-left font-medium text-black">
+                            <th
+                                class="border-b border-white p-2 lg:p-4 lg:pl-8 pt-0 pb-1 lg:pb-3 text-left font-medium text-black">
+                                TTM</th>
+                            <th
+                                class="border-b border-white p-2 lg:p-4 pt-0 pb-1 lg:pb-3 text-left font-medium text-black">
                                 The Felix</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white/10 dark:bg-gray-800">
                         <tr>
-                            <td class="border-b border-gray-100 p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Chủ đầu tư </td>
-                            <td class="border-b border-gray-100 p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 Công ty Cổ phần C-Holdings</td>
                         </tr>
                         <tr>
-                            <td class="border-b border-gray-100 p-4 pl-8 text-black">
-                                Đối tác tư vấn triển khai</td>
-                            <td class="border-b border-gray-100 p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black line-clamp-1">
+                                ĐTTVTK</td>
+                            <td class="border-b border-amber-600 p-2 text-black">
                                 BHS Group</td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Vị trí</td>
-                            <td class="border-b border-white p-4 text-black">
-                                Tọa lạc ngay mặt tiền Đường Nguyễn Du, Phường Bình Hòa, trung tâm Thành phố
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
+                                Mặt tiền Đường Nguyễn Du, Phường Bình Hòa, trung tâm Thành phố
                                 Thuận An,
                                 Tỉnh Bình Dương.</td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Quy mô </td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 9,465 m2 (gồm 40 tầng nổi + 01 tầng hầm)</td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Mật độ xây dựng</td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 39% (gồm diện tích đường giao thông)</td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Số lượng căn hộ</td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 1216 căn (Tháp A: 604 căn, Tháp B: 612 căn) </td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Tiện ích</td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 68 tiện ích nội khu</td>
                             </td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
-                                Loại hình sản phẩm </td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
+                                LHSP </td>
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 Căn hộ, Officetel, Duplex, Shop</td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Diện tích căn hộ</td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 <ul>
                                     <li>Căn 1 PN: 44.30m2 - 45.68m2</li>
                                     <li>Căn 2 PN: 59.75m2 - 70.20m2</li>
@@ -244,9 +289,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="border-b border-white p-4 pl-8 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 pl-2 lg:pl-8 text-black">
                                 Hình thức sở hữu</td>
-                            <td class="border-b border-white p-4 text-black">
+                            <td class="border-b border-amber-600 p-2 lg:p-4 text-black">
                                 <ul>
                                     <li>Người Việt Nam: Sở hữu lâu dài</li>
                                     <li>Người nước ngoài: Sở hữu 50 năm</li>
@@ -263,16 +308,26 @@
     <section class="section horizontal">
         <div class="slides-container">
             <div class="slide gradient-blue md:relative">
-                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                <div class="flex flex-col gap-2 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <div class="md:absolute md:w-96 md:py-4 md:bottom-80 md:left-12 md:text-6xl">
+                        <img src="image/flower arrangement for wedding.png" alt="Logo của công ty Example"
+                            class="m-0 w-full h-auto lg:m-auto lg:w-full lg:h-auto" loading="lazy"
+                            title="Logo Example Company">
+                    </div>
                     <h3
-                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        class="mb-4 text-4xl text-playfair-display text-amber-400 text-center font-bold md:absolute md:bottom-72 md:py-4 md:left-12 md:text-6xl">
                         Vững pháp lý
+                        <img src="image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 w-56 lg:w-96 h-auto" loading="lazy" title="Logo Example Company">
                     </h3>
                     <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
                         class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
                         loading="lazy" title="Logo Example Company">
+                    <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
+                        class="lg:m-auto lg:w-auto lg:h-full absolute right-0 bottom-0 w-72 h-72" loading="lazy"
+                        title="Logo Example Company">
                     <div
-                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        class="md:bg-amber-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
                         <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
                             <li class="flex items-start mb-0">
                                 <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
@@ -295,16 +350,26 @@
                 </div>
             </div>
             <div class="slide gradient-blue md:relative">
-                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                <div class="flex flex-col gap-2 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <div class="md:absolute md:w-96 md:py-4 md:bottom-80 md:left-12 md:text-6xl">
+                        <img src="image/flower arrangement for wedding.png" alt="Logo của công ty Example"
+                            class="m-0 w-full h-auto lg:m-auto lg:w-full lg:h-auto" loading="lazy"
+                            title="Logo Example Company">
+                    </div>
                     <h3
-                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        class="mb-4 text-4xl text-playfair-display text-amber-400 text-center font-bold md:absolute md:bottom-72 md:py-4 md:left-12 md:text-6xl">
                         Vững pháp lý
+                        <img src="image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 w-56 lg:w-96 h-auto" loading="lazy" title="Logo Example Company">
                     </h3>
                     <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
                         class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
                         loading="lazy" title="Logo Example Company">
+                    <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
+                        class="lg:m-auto lg:w-auto lg:h-full absolute right-0 bottom-0 w-72 h-72" loading="lazy"
+                        title="Logo Example Company">
                     <div
-                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        class="md:bg-amber-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
                         <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
                             <li class="flex items-start mb-0">
                                 <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
@@ -327,16 +392,26 @@
                 </div>
             </div>
             <div class="slide gradient-blue md:relative">
-                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                <div class="flex flex-col gap-2 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <div class="md:absolute md:w-96 md:py-4 md:bottom-80 md:left-12 md:text-6xl">
+                        <img src="image/flower arrangement for wedding.png" alt="Logo của công ty Example"
+                            class="m-0 w-full h-auto lg:m-auto lg:w-full lg:h-auto" loading="lazy"
+                            title="Logo Example Company">
+                    </div>
                     <h3
-                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        class="mb-4 text-4xl text-playfair-display text-amber-400 text-center font-bold md:absolute md:bottom-72 md:py-4 md:left-12 md:text-6xl">
                         Vững pháp lý
+                        <img src="image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 w-56 lg:w-96 h-auto" loading="lazy" title="Logo Example Company">
                     </h3>
                     <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
                         class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
                         loading="lazy" title="Logo Example Company">
+                    <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
+                        class="lg:m-auto lg:w-auto lg:h-full absolute right-0 bottom-0 w-72 h-72" loading="lazy"
+                        title="Logo Example Company">
                     <div
-                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        class="md:bg-amber-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
                         <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
                             <li class="flex items-start mb-0">
                                 <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
@@ -359,16 +434,26 @@
                 </div>
             </div>
             <div class="slide gradient-blue md:relative">
-                <div class="flex flex-col gap-4 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                <div class="flex flex-col gap-2 items-center justify-center w-full h-full overflow-hidden lg:flex-row">
+                    <div class="md:absolute md:w-96 md:py-4 md:bottom-80 md:left-12 md:text-6xl">
+                        <img src="image/flower arrangement for wedding.png" alt="Logo của công ty Example"
+                            class="m-0 w-full h-auto lg:m-auto lg:w-full lg:h-auto" loading="lazy"
+                            title="Logo Example Company">
+                    </div>
                     <h3
-                        class="mb-4 text-4xl text-playfair-display text-indigo-600/80 border-b-4 border-b-white text-center font-bold md:absolute md:bottom-76 md:py-4 md:left-12 md:text-6xl">
+                        class="mb-4 text-4xl text-playfair-display text-amber-400 text-center font-bold md:absolute md:bottom-72 md:py-4 md:left-12 md:text-6xl">
                         Vững pháp lý
+                        <img src="image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 w-56 lg:w-96 h-auto" loading="lazy" title="Logo Example Company">
                     </h3>
                     <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
                         class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
                         loading="lazy" title="Logo Example Company">
+                    <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
+                        class="lg:m-auto lg:w-auto lg:h-full absolute right-0 bottom-0 w-72 h-72" loading="lazy"
+                        title="Logo Example Company">
                     <div
-                        class="md:bg-blue-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
+                        class="md:bg-amber-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
                         <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
                             <li class="flex items-start mb-0">
                                 <span>Dự án đã được <strong>cấp phép đầy đủ</strong> (quy hoạch, xây dựng, đầu
@@ -392,9 +477,15 @@
             </div>
         </div>
         <div class="overlay">
-            <div class="w-full bg-white">
+            <div class="w-full shadow-inner bg-gradient-to-br from-[#fef7ef] to-[#f9f1e9] rounded">
                 <div class="max-w-6xl mx-auto p-8 shadow-lg">
                     <form class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:h-16 lg:w-48">
+                            <img src="image/watercolor floral flower.png" alt="Logo của công ty Example"
+                                class="mx-auto w-1/2 lg:w-full h-full object-cover" loading="lazy"
+                                title="Logo Example Company">
+                        </div>
+
                         <div class="relative w-full">
                             <input type="text" id="name" placeholder=" "
                                 class="peer w-full border border-gray-300 rounded-xl p-4 pt-4 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
@@ -415,7 +506,7 @@
                         </div>
 
                         <button type="submit"
-                            class="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-8 py-3 rounded-2xl hover:from-green-500 hover:to-blue-600 transition">
+                            class="w-full bg-gradient-to-r from-amber-400 to-amber-500 text-white font-semibold px-8 py-3 rounded-2xl hover:from-green-500 hover:to-blue-600 transition">
                             Book ngay
                         </button>
 
@@ -425,10 +516,10 @@
             </div>
 
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4  linear-bg">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4 linear-bg">
                 <div class="flex flex-col gap-2 lg:gap-4">
                     <img src="./image/z6623231046114_d121ebf75389b1d245cf855f35e3b2da.webp" alt="" srcset=""
-                        class="h-full w-auto">
+                        class="h-full w-auto hidden lg:block">
                     <img src="./image/z6623233622803_99b86001bdbdd915034579c5440e1238.webp" alt="" srcset=""
                         class="h-full w-auto">
                 </div>
@@ -450,24 +541,23 @@
 
 
     <section class="mt-8 pb-4 lg:pb-8 max-w-6xl mx-auto text-black">
-        <div class="grid grid-cols-2 lg:grid-cols-3 grid-rows-3 border-2 border-cyan-300 border-collapse">
+        <div class="grid grid-cols-2 lg:grid-cols-3 grid-rows-3 lg:border-2 lg:border-amber-300 border-collapse">
             <div class="col-span-2 lg:row-span-2">
-                <div class="hidden lg:block h-48 w-full lg:border-b-2 lg:border-cyan-300">
+                <div class="hidden lg:block h-48 w-full lg:border-b-2 lg:border-amber-300">
                 </div>
                 <h3
-                    class="text-center lg:text-left font-bold gold-gradient text-4xl lg:text-6xl px-4 py-4 text-playfair-display">
+                    class="text-center lg:text-left font-bold gold-gradient text-4xl lg:text-6xl px-4 pt-4 lg:py-4 text-playfair-display">
                     Không lo </br>
                     <span class="text-6xl lg:text-8xl">
                         về giá
                     </span>
                 </h3>
             </div>
-            <div class="col-span-2 lg:col-span-1 row-span-2 border-2 border-t-0 lg:border-r-0 lg:border-cyan-300">
-                <img src="./image/z6623233676125_93218eaad84979732ef39180bf67a715.webp"
-                    alt="Mô tả hình ảnh"
+            <div class="col-span-2 lg:col-span-1 row-span-2 border-2 border-t-0 lg:border-r-0 lg:border-amber-300">
+                <img src="./image/z6623233676125_93218eaad84979732ef39180bf67a715.webp" alt="Mô tả hình ảnh"
                     class="w-full h-full object-cover transition duration-500 ease-in-out brightness-75 group-hover:brightness-100" />
             </div>
-            <div class="col-span-2 border-2 border-l-0 border-b-0 border-cyan-300 h-full  bg-cover bg-center"
+            <div class="col-span-2 border-2 border-l-0 border-b-0 border-amber-300 h-full  bg-cover bg-center"
                 style="background-image: url(https://duanthefelix.vn/wp-content/uploads/2025/05/The-Felix_C08_Pool.webp);">
             </div>
             <div class="p-4 col-span-2 lg:col-span-1 text-lora">
@@ -481,18 +571,20 @@
     <section class="horizontal-scroll-wrapper">
         <div class="horizontal-scroll-content">
             <div class="panel h-screen text-black text-lora">
-                 <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
+                <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
                     <div class="h-creen w-full flex relative">
                         <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
-                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full text-lora">
                                 <img src="./image/chdh/init.jpg" alt="Logo của công ty Example"
-                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
-                                    title="Logo Example Company">
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg"
+                                    loading="lazy" title="Logo Example Company">
 
                                 <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
-                                    <div class="font-sans px-4">
-                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
-                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                    <div class="px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900 text-playfair-display">
+                                            CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG
+                                            NGỦ,
                                             1 WC</h3>
 
                                         <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
@@ -537,19 +629,21 @@
                     </div>
                 </div>
             </div>
-             <div class="panel h-screen text-black text-lora">
-                 <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
+            <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
                     <div class="h-creen w-full flex relative">
                         <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
-                            <div class="h-full relative flex flex-col justify-center lg:flex-row gap-8 w-full">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full text-lora">
                                 <img src="./image/chdh/init.jpg" alt="Logo của công ty Example"
-                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
-                                    title="Logo Example Company">
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg"
+                                    loading="lazy" title="Logo Example Company">
 
-                                <div class="relative h-full w-full flex flex-col-reverse lg:flex-col gap-4 lg:gap-0">
-                                    <div class="font-sans px-4">
-                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
-                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
+                                    <div class="px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900 text-playfair-display">
+                                            CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG
+                                            NGỦ,
                                             1 WC</h3>
 
                                         <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
@@ -594,19 +688,21 @@
                     </div>
                 </div>
             </div>
-             <div class="panel h-screen text-black text-lora">
-                 <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
+            <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
                     <div class="h-creen w-full flex relative">
                         <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
-                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full text-lora">
                                 <img src="./image/chdh/init.jpg" alt="Logo của công ty Example"
-                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
-                                    title="Logo Example Company">
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg"
+                                    loading="lazy" title="Logo Example Company">
 
                                 <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
-                                    <div class="font-sans px-4">
-                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
-                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                    <div class="px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900 text-playfair-display">
+                                            CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG
+                                            NGỦ,
                                             1 WC</h3>
 
                                         <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
@@ -651,19 +747,21 @@
                     </div>
                 </div>
             </div>
-             <div class="panel h-screen text-black text-lora">
-                 <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
+            <div class="panel h-screen text-black text-lora">
+                <div class="animate-image h-screen w-full flex justify-center items-center lg:block">
                     <div class="h-creen w-full flex relative">
                         <div class="lg:py-12 lg:px-12 lg:h-screen w-full relative">
-                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full">
+                            <div class="h-full relative flex flex-col lg:flex-row gap-8 w-full text-lora">
                                 <img src="./image/chdh/init.jpg" alt="Logo của công ty Example"
-                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg" loading="lazy"
-                                    title="Logo Example Company">
+                                    class="mx-auto lg:m-0 h-[35vh] w-[fit-content] lg:h-full lg:w-auto object-cover rounded-xl shadow-lg"
+                                    loading="lazy" title="Logo Example Company">
 
                                 <div class="relative h-full w-full flex flex-col-reverse lg:flex-col">
-                                    <div class="font-sans px-4">
-                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900">CĂN HỘ</h2>
-                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG NGỦ,
+                                    <div class="px-4">
+                                        <h2 class="text-lg lg:text-3xl font-bold text-blue-900 text-playfair-display">
+                                            CĂN HỘ</h2>
+                                        <h3 class="text-xl lg:text-4xl font-bold text-blue-900 mb-2 lg:mb-4">01+ PHÒNG
+                                            NGỦ,
                                             1 WC</h3>
 
                                         <p class="text-sm lg:text-lg text-gray-700">Unit Type</p>
@@ -711,9 +809,13 @@
         </div>
     </section>
 
+
+
     <script src="index.js"></script>
-    <script src="splide.js"></script>
     <script src="index-new.js"></script>
+    <script src="table.js"></script>
+    <script src="splide.js"></script>
+    <script src="motion.js"></script>
     <!-- <script src="scroll.js"></script> -->
     <script src="carousel.js"></script>
 
