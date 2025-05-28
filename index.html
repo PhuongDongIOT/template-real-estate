@@ -98,6 +98,11 @@
                 transform-origin: left top;
             }
 
+            .rotate-text-right {
+                transform: rotate(-90deg);
+                transform-origin: right top;
+            }
+
             .bg-estate {
                 background-image: url(./image/the_felix.jpg);
             }
@@ -112,22 +117,79 @@
     <section class="relative">
         <div class="lg:h-screen w-full relative">
             <img src="image/the_felix.jpg" alt="Ảnh"
-            class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover shadow-lg" loading="lazy">
+                class="relative gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover shadow-xl"
+                loading="lazy">
+            <img src="image/yellow-curve-wave-abstract-design.png" alt="Ảnh"
+                class="z-10 m-0 w-full h-auto lg:hidden lg:m-auto lg:w-auto lg:h-full object-cover transform rotate-x-180 opacity-50"
+                loading="lazy">
         </div>
-        <div class="lg:absolute lg:top-[30%] lg:left-16 lg:transform lg:-translate-y-[50%]">
-        <div
-            class="text-4xl lg:text-8xl font-bold text-playfair-display">
-            <h2 class="gold-gradient py-4">Căn hộ hạng sang</h2>
-        </div>
-        <div
-            class="text-4xl lg:text-6xl font-bold text-playfair-display">
-            <h2 class="gold-gradient py-4">Trung tâm sài gòn</h2>
-        </div>
-        <div class="grid grid-cols-3">
-            <div></div>
-        </div>
-         <p class="text-5xl font-bold text-lora">Lorem ipsum dolor</p>
-         <p class="text-5xl font-bold text-lora">Lorem ipsum dolor sit amet</p>
+        <div class="lg:absolute lg:top-[10%] lg:left-16 lg:transform flex flex-col-reverse lg:flex-col relative -top-6">
+            <div class="text-center lg:text-left">
+                <div class="text-6xl lg:text-8xl font-bold text-playfair-display">
+                    <h2 class="gold-gradient py-4">Căn hộ hạng sang</h2>
+                </div>
+                <div class="text-4xl lg:text-6xl font-bold text-playfair-display">
+                    <h2 class="gold-gradient py-2 lg:py-4">Trung tâm sài gòn</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 gap-4 w-full lg:w-1/2">
+                <div class="relative">
+                    <img src="image/golden warm gold.png" alt="Ảnh"
+                        class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover" loading="lazy">
+                    <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+
+                        <div>
+                            <p class="text-black lg:text-white text-lora text-xs">Ưu đãi</p>
+                            <p class="text-black lg:text-white text-lora text-sm lg:text-md font-bold">Chỉ từ</p>
+                            <div class="text-3xl lg:text-6xl font-bold text-lora">
+                                <h2 class="gold-gradient">5<span class="text-2xl lg:text-4xl">%</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="image/golden warm gold.png" alt="Ảnh"
+                        class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover" loading="lazy">
+                    <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+
+                        <div>
+                            <p class="text-black lg:text-white text-lora text-xs">Ưu đãi</p>
+                            <p class="text-black lg:text-white text-lora text-sm lg:text-md font-bold">Chỉ từ</p>
+                            <div class="text-3xl lg:text-6xl font-bold text-lora">
+                                <h2 class="gold-gradient">5<span class="text-2xl lg:text-4xl">%</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="image/golden warm gold.png" alt="Ảnh"
+                        class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover" loading="lazy">
+                    <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+
+                        <div>
+                            <p class="text-black lg:text-white text-lora text-xs">Ưu đãi</p>
+                            <p class="text-black lg:text-white text-lora text-sm lg:text-md font-bold">Chỉ từ</p>
+                            <div class="text-3xl lg:text-6xl font-bold text-lora">
+                                <h2 class="gold-gradient">5<span class="text-2xl lg:text-4xl">%</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="image/golden warm gold.png" alt="Ảnh"
+                        class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover" loading="lazy">
+                    <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+
+                        <div>
+                            <p class="text-black lg:text-white text-lora text-xs">Ưu đãi</p>
+                            <p class="text-black lg:text-white text-lora text-sm lg:text-md font-bold">Chỉ từ</p>
+                            <div class="text-3xl lg:text-6xl font-bold text-lora">
+                                <h2 class="gold-gradient">5<span class="text-2xl lg:text-4xl">%</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -296,6 +358,51 @@
     </section>
 
 
+
+    <section class="w-full h-auto lg:h-screen">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative">
+                <img src="image/so-do-vi-tri.webp" alt="Logo của công ty Example"
+                    class="m-0 w-full h-auto lg:m-auto lg:w-full lg:h-auto" loading="lazy" title="Logo Example Company">
+                <img src="image/golden warm gold.png" alt="Logo của công ty Example"
+                    class="m-0 w-full h-auto lg:m-auto lg:w-full lg:h-auto absolute -top-2 lg:-top-4" loading="lazy"
+                    title="Logo Example Company">
+            </div>
+
+            <div class="relative">
+                <h2
+                    class="text-5xl lg:text-9xl text-center font-bold text-playfair-display py-4 lg:absolute lg:top-[30%] lg:-left-[20rem] rotate-text-right">
+                    <span class="gold-gradient">Vị trí</span>
+                </h2>
+                <div
+                    class="h-full lg:ml-[10rem] lg:mr-4 w-full overflow-auto rounded-lg bg-white/10 outline outline-white/5 dark:bg-gray-950/50 lg:relative lg:w-auto shadow-inner">
+                    <div class="h--full my-4 lg:my-8 overflow-hidden relative">
+                        <ul class="text-black py-2 px-4 font-lora">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi necessitatibus odio
+                                atque ipsa distinctio deleniti, explicabo, neque, iste saepe amet minus deserunt
+                                repellat. Nam accusamus non maxime laudantium eligendi a.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi necessitatibus odio
+                                atque ipsa distinctio deleniti, explicabo, neque, iste saepe amet minus deserunt
+                                repellat. Nam accusamus non maxime laudantium eligendi a.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi necessitatibus odio
+                                atque ipsa distinctio deleniti, explicabo, neque, iste saepe amet minus deserunt
+                                repellat. Nam accusamus non maxime laudantium eligendi a.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi necessitatibus odio
+                                atque ipsa distinctio deleniti, explicabo, neque, iste saepe amet minus deserunt
+                                repellat. Nam accusamus non maxime laudantium eligendi a.</li>
+                        </ul>
+                        <div class=" absolute right-0 bottom-0 w-56 h-56">
+                            <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
+                            class="lg:m-auto lg:w-auto lg:h-full" loading="lazy"
+                            title="Logo Example Company">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="section horizontal">
         <div class="slides-container">
             <div class="slide gradient-blue md:relative">
@@ -314,9 +421,11 @@
                     <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Logo của công ty Example"
                         class="m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover rounded-xl shadow-lg"
                         loading="lazy" title="Logo Example Company">
-                    <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
-                        class="lg:m-auto lg:w-auto lg:h-full absolute right-0 bottom-0 w-72 h-72" loading="lazy"
+                   <div class=" absolute right-0 bottom-0 w-80 h-80">
+                     <img src="image/hand drawn flowers and leaves.png" alt="Logo của công ty Example"
+                        class="lg:m-auto lg:w-auto lg:h-full" loading="lazy"
                         title="Logo Example Company">
+                   </div>
                     <div
                         class="md:bg-amber-200/50 md:rounded-xl md:px-4 md:py-2 text-lora text-black text-left px-4 text-sm md:text-lg md:absolute md:bottom-20 md:left-12 ine-clamp-4 md:line-clamp-2 md:max-w-lg">
                         <ul class="space-y-4 text-gray-700 lg:text-black leading-relaxed list-none">
@@ -801,7 +910,7 @@
 
 
 
-    <section class="wrapper flex w-full h-screen relative" id="wrapper">
+    <section class="wrapper flex w-full h-[50vh] lg:h-screen relative" id="wrapper">
         <div class="w-full h-screen relative overflow-hidden">
             <div class="slider-slide w-full h-screen bg-cover bg-center"
                 style="background-image: url(./image/The\ Felix_C02_Playground.webp);"></div>
@@ -813,12 +922,10 @@
                 style="background-image: url(./image/The\ Felix_C07_Shophouse.webp);"></div>
         </div>
 
-        <div class="text text-6xl lg:text-8xl top-56 left-12 font-extrabold text-lora bg-amber-50/10 px-6 py-4 border-b-4 border-b-blue-100"
+        <h2 class="text-shadow-amber-400 text-shadow-2xs text text-6xl lg:text-8xl top-28 lg:top-56 left-20 lg:left-12 font-extrabold text-lora bg-amber-50/10 px-6 py-4 border-b-4 border-b-blue-100"
             id="text">
-            <h2 class="gold-gradient">
-                01 Slide</br> 1 Thiên nhiên
-            </h2>
-        </div>
+            01 Slide</br> 1 Thiên nhiên
+        </h2>
 
         <div class="nav absolute flex flex-col lg:flex-row text-lora text-md text-shadow-xs text-shadow-blue-300 font-bold"
             id="nav">
@@ -840,8 +947,8 @@
             </div>
         </div>
 
-        <button class="button" id="next">
-            <span>Next</span>
+        <button class="button text-lora text-shadow-2xs text-shadow-amber-100 font-bold" id="next">
+            <span>NEXT</span>
         </button>
     </section>
 
@@ -851,10 +958,13 @@
             <span class="gold-gradient">Tin tức</span>
         </h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4 text-black">
-            <div class="h-auto relative flex lg:flex-col gap-2 bg-linear-center lg:rounded-xl pb-4">
+            <div class="h-auto relative flex lg:flex-col gap-2 shadow-innerx` bg-linear-center lg:rounded-xl pb-4">
                 <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
                     class="w-full h-auto lg:m-auto lg:w-full lg:h-48 xl:h-56 shadow-lg lg:rounded-xl overflow-hidden"
                     loading="lazy">
+                    <div>
+                        <p class="text-6xl absolute text-white top-0">01</p>
+                    </div>
                 <div>
                     <div class="mt-2">
                         <h3 class="mx-2 line-clamp-1 text-2xl text-center font-bold text-playfair-display">Lorem, ipsum
