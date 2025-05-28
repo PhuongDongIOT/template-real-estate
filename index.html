@@ -84,6 +84,15 @@
 
         @media (width >=64rem) {
 
+
+            .bg-linear-center {
+                background: linear-gradient(to right,
+                        rgba(255, 223, 180, 0.8),
+                        rgba(255, 255, 255, 1),
+                        rgba(255, 223, 180, 0.8));
+
+            }
+
             .rotate-text {
                 transform: rotate(-90deg);
                 transform-origin: left top;
@@ -98,49 +107,31 @@
 </head>
 
 <body class="relative linear-bg">
-    <section class="wrapper flex w-full h-screen relative" id="wrapper">
-        <div class="w-full h-screen relative overflow-hidden">
-            <div class="slider-slide w-full h-screen bg-cover bg-center"
-                style="background-image: url(./image/The\ Felix_C02_Playground.webp);"></div>
-            <div class="slider-slide w-full h-screen bg-cover bg-center"
-                style="background-image: url(./image/The\ Felix_C03_Pool.webp);"></div>
-            <div class="slider-slide w-full h-screen bg-cover bg-center"
-                style="background-image: url(./image/The\ Felix_C06_Drop\ Off.webp);"></div>
-            <div class="slider-slide w-full h-screen bg-cover bg-center"
-                style="background-image: url(./image/The\ Felix_C07_Shophouse.webp);"></div>
-        </div>
 
-        <div class="text text-6xl lg:text-8xl top-56 left-12 font-extrabold text-lora bg-amber-50/10 px-6 py-4 border-b-4 border-b-blue-100"
-            id="text">
-            <h2 class="gold-gradient">
-                01 Slide</br> 1 Thiên nhiên
-            </h2>
-        </div>
 
-        <div class="nav absolute flex flex-col lg:flex-row text-lora text-md text-shadow-xs text-shadow-blue-300 font-bold"
-            id="nav">
-            <div class="nav-item active" id="navItem0">
-                <span>01 Thiên nhiên</span>
-                <div class="nav-bar"></div>
-            </div>
-            <div class="nav-item" id="navItem1">
-                <span>02 Thiên nhiên</span>
-                <div class="nav-bar"></div>
-            </div>
-            <div class="nav-item" id="navItem2">
-                <span>03 Thiên nhiên</span>
-                <div class="nav-bar"></div>
-            </div>
-            <div class="nav-item" id="navItem3">
-                <span>04 Thiên nhiên</span>
-                <div class="nav-bar"></div>
-            </div>
+    <section class="relative">
+        <div class="lg:h-screen w-full relative">
+            <img src="image/the_felix.jpg" alt="Ảnh"
+            class="gsap-img m-0 w-full h-auto lg:m-auto lg:w-auto lg:h-full object-cover shadow-lg" loading="lazy">
         </div>
-
-        <button class="button" id="next">
-            <span>Next</span>
-        </button>
+        <div class="lg:absolute lg:top-[30%] lg:left-16 lg:transform lg:-translate-y-[50%]">
+        <div
+            class="text-4xl lg:text-8xl font-bold text-playfair-display">
+            <h2 class="gold-gradient py-4">Căn hộ hạng sang</h2>
+        </div>
+        <div
+            class="text-4xl lg:text-6xl font-bold text-playfair-display">
+            <h2 class="gold-gradient py-4">Trung tâm sài gòn</h2>
+        </div>
+        <div class="grid grid-cols-3">
+            <div></div>
+        </div>
+         <p class="text-5xl font-bold text-lora">Lorem ipsum dolor</p>
+         <p class="text-5xl font-bold text-lora">Lorem ipsum dolor sit amet</p>
+        </div>
     </section>
+
+
 
     <section class="mt-8 px-2 w-full overflow-hidden">
         <div
@@ -603,8 +594,7 @@
                                             <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
                                         </div>
                                     </div>
-                                    <img src="./image/chdh/review.png"
-                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <img src="./image/chdh/review.png" class="w-2/3 h-auto mx-auto" alt="" srcset="">
                                     <div id="image-carousel" class="splide" aria-label="Splide Basic HTML Example">
                                         <div class="splide__track">
                                             <ul class="splide__list">
@@ -662,8 +652,7 @@
                                             <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
                                         </div>
                                     </div>
-                                    <img src="./image/chdh/review.png"
-                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <img src="./image/chdh/review.png" class="w-2/3 h-auto mx-auto" alt="" srcset="">
                                     <div id="image-carousel1" class="splide" aria-label="Splide Basic HTML Example">
                                         <div class="splide__track">
                                             <ul class="splide__list">
@@ -721,8 +710,7 @@
                                             <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
                                         </div>
                                     </div>
-                                    <img src="./image/chdh/review.png"
-                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <img src="./image/chdh/review.png" class="w-2/3 h-auto mx-auto" alt="" srcset="">
                                     <div id="image-carousel2" class="splide" aria-label="Splide Basic HTML Example">
                                         <div class="splide__track">
                                             <ul class="splide__list">
@@ -780,8 +768,7 @@
                                             <p class="text-lg lg:text-2xl font-bold text-blue-900">41.28m²</p>
                                         </div>
                                     </div>
-                                    <img src="./image/chdh/review.png"
-                                        class="w-2/3 h-auto mx-auto" alt="" srcset="">
+                                    <img src="./image/chdh/review.png" class="w-2/3 h-auto mx-auto" alt="" srcset="">
                                     <div id="image-carousel3" class="splide" aria-label="Splide Basic HTML Example">
                                         <div class="splide__track">
                                             <ul class="splide__list">
@@ -806,6 +793,155 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="wrapper flex w-full h-screen relative" id="wrapper">
+        <div class="w-full h-screen relative overflow-hidden">
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C02_Playground.webp);"></div>
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C03_Pool.webp);"></div>
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C06_Drop\ Off.webp);"></div>
+            <div class="slider-slide w-full h-screen bg-cover bg-center"
+                style="background-image: url(./image/The\ Felix_C07_Shophouse.webp);"></div>
+        </div>
+
+        <div class="text text-6xl lg:text-8xl top-56 left-12 font-extrabold text-lora bg-amber-50/10 px-6 py-4 border-b-4 border-b-blue-100"
+            id="text">
+            <h2 class="gold-gradient">
+                01 Slide</br> 1 Thiên nhiên
+            </h2>
+        </div>
+
+        <div class="nav absolute flex flex-col lg:flex-row text-lora text-md text-shadow-xs text-shadow-blue-300 font-bold"
+            id="nav">
+            <div class="nav-item active" id="navItem0">
+                <span>01 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+            <div class="nav-item" id="navItem1">
+                <span>02 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+            <div class="nav-item" id="navItem2">
+                <span>03 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+            <div class="nav-item" id="navItem3">
+                <span>04 Thiên nhiên</span>
+                <div class="nav-bar"></div>
+            </div>
+        </div>
+
+        <button class="button" id="next">
+            <span>Next</span>
+        </button>
+    </section>
+
+
+    <section class="overflow-hidden w-full py-8">
+        <h2 class="text-5xl lg:text-9xl text-center font-bold text-playfair-display py-4 mb-4">
+            <span class="gold-gradient">Tin tức</span>
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4 text-black">
+            <div class="h-auto relative flex lg:flex-col gap-2 bg-linear-center lg:rounded-xl pb-4">
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="w-full h-auto lg:m-auto lg:w-full lg:h-48 xl:h-56 shadow-lg lg:rounded-xl overflow-hidden"
+                    loading="lazy">
+                <div>
+                    <div class="mt-2">
+                        <h3 class="mx-2 line-clamp-1 text-2xl text-center font-bold text-playfair-display">Lorem, ipsum
+                            dolor sit amet</h3>
+                        <img src="./image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 mx-auto w-2/3 h-auto" loading="lazy" title="Logo Example Company">
+                    </div>
+                    <p class="w-full mx-2 line-clamp-2 text-lg text-lora"> consectetur adipisicing elit. Nihil et quae
+                        asperiores
+                        neque
+                        consectetur minima
+                    </p>
+                </div>
+            </div>
+            <div class="h-auto relative flex lg:flex-col gap-2 bg-linear-center lg:rounded-xl pb-4">
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="w-full h-auto lg:m-auto lg:w-full lg:h-48 xl:h-56 shadow-lg lg:rounded-xl overflow-hidden"
+                    loading="lazy">
+                <div>
+                    <div class="mt-2">
+                        <h3 class="mx-2 line-clamp-1 text-2xl text-center font-bold text-playfair-display">Lorem, ipsum
+                            dolor sit amet</h3>
+                        <img src="./image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 mx-auto w-2/3 h-auto" loading="lazy" title="Logo Example Company">
+                    </div>
+                    <p class="w-full mx-2 line-clamp-2 text-lg text-lora"> consectetur adipisicing elit. Nihil et quae
+                        asperiores
+                        neque
+                        consectetur minima
+                    </p>
+                </div>
+            </div>
+            <div class="h-auto relative flex lg:flex-col gap-2 bg-linear-center lg:rounded-xl pb-4">
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="w-full h-auto lg:m-auto lg:w-full lg:h-48 xl:h-56 shadow-lg lg:rounded-xl overflow-hidden"
+                    loading="lazy">
+                <div>
+                    <div class="mt-2">
+                        <h3 class="mx-2 line-clamp-1 text-2xl text-center font-bold text-playfair-display">Lorem, ipsum
+                            dolor sit amet</h3>
+                        <img src="./image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 mx-auto w-2/3 h-auto" loading="lazy" title="Logo Example Company">
+                    </div>
+                    <p class="w-full mx-2 line-clamp-2 text-lg text-lora"> consectetur adipisicing elit. Nihil et quae
+                        asperiores
+                        neque
+                        consectetur minima
+                    </p>
+                </div>
+            </div>
+            <div class="h-auto relative flex lg:flex-col gap-2 bg-linear-center lg:rounded-xl pb-4">
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="w-full h-auto lg:m-auto lg:w-full lg:h-48 xl:h-56 shadow-lg lg:rounded-xl overflow-hidden"
+                    loading="lazy">
+                <div>
+                    <div class="mt-2">
+                        <h3 class="mx-2 line-clamp-1 text-2xl text-center font-bold text-playfair-display">Lorem, ipsum
+                            dolor sit amet</h3>
+                        <img src="./image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 mx-auto w-2/3 h-auto" loading="lazy" title="Logo Example Company">
+                    </div>
+                    <p class="w-full mx-2 line-clamp-2 text-lg text-lora"> consectetur adipisicing elit. Nihil et quae
+                        asperiores
+                        neque
+                        consectetur minima
+                    </p>
+                </div>
+            </div>
+            <div class="h-auto relative flex lg:flex-col gap-2 bg-linear-center lg:rounded-xl pb-4">
+                <img src="image/z6623231046068_128231234fb99dfdd555364dcae7bd37.webp" alt="Ảnh"
+                    class="w-full h-auto lg:m-auto lg:w-full lg:h-48 xl:h-56 shadow-lg lg:rounded-xl overflow-hidden"
+                    loading="lazy">
+                <div>
+                    <div class="mt-2">
+                        <h3 class="mx-2 line-clamp-1 text-2xl text-center font-bold text-playfair-display">Lorem, ipsum
+                            dolor sit amet</h3>
+                        <img src="./image/dividing line.png" alt="Logo của công ty Example"
+                            class="mt-2 mx-auto w-2/3 h-auto" loading="lazy" title="Logo Example Company">
+                    </div>
+                    <p class="w-full mx-2 line-clamp-2 text-lg text-lora"> consectetur adipisicing elit. Nihil et quae
+                        asperiores
+                        neque
+                        consectetur minima
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
