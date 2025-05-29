@@ -56,7 +56,21 @@ pannellum.viewer('panorama2', {
     "panorama": "https://pannellum.org/images/alma.jpg",
     "autoLoad": true,
 });
-
+pannellum.viewer('panorama3', {
+    "type": "equirectangular",
+    "panorama": "https://pannellum.org/images/alma.jpg",
+    "autoLoad": true,
+});
+pannellum.viewer('panorama4', {
+    "type": "equirectangular",
+    "panorama": "https://pannellum.org/images/alma.jpg",
+    "autoLoad": true,
+});
+pannellum.viewer('panorama5', {
+    "type": "equirectangular",
+    "panorama": "https://pannellum.org/images/alma.jpg",
+    "autoLoad": true,
+});
 // Make buttons work
 document.getElementById('pan-up').addEventListener('click', function (e) {
     viewer.setPitch(viewer.getPitch() + 10);
