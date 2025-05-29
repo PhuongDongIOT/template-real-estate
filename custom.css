@@ -352,7 +352,6 @@ body {
 }
 
 a {
-    color: var(--green);
     font-weight: bold;
     text-decoration: none;
 }
